@@ -57,16 +57,21 @@ end
 abydosAddress = {26,6,14,31,11,29,0}
 chulakAddress = {8,1,22,14,36,19,0}
 lanteaAddress = {18,20,1,15,14,7,19,0}
-midwayAddress = {8,29,19,11,7,4,23,31,0}
+--midwayAddress = {8,29,19,11,7,4,23,31,0}
 netherAddress = {27,23,4,34,12,28,0}
-newAthosAddress = {18,21,14,24,1,26,28,0}
+--newAthosAddress = {18,21,14,24,1,26,28,0}
+undergardenAddress = {14,31,3,28,22,21,0}
+evergardenAddress = {2,18,33,13,10,19}
+bloodmagicAddress = {38,14,12,28,5,11,0}
+twilight = {36,11,30,27,23,24,0}
+
 
 --TODO: Update the follow addresses to remove the long-distance dialling
---NOTE: Ad Astra Addresses
+--NOTE: Ad Astra Addresses, no gate spawning
 
-moonAddress = {34,2,17,1,18,3,24,4,0}
-marsAddress = {9,12,25,34,20,29,8,27,0}
-venusAddress = {32,9,17,16,8,6,21,22,0}
+--moonAddress = {34,2,17,1,18,3,24,4,0}
+--marsAddress = {9,12,25,34,20,29,8,27,0}
+--venusAddress = {32,9,17,16,8,6,21,22,0}
 
 -- Iris sanity check on boot (Useful is the iris was left on and the program reboots, makes sure to set the correct values in memory)
 
@@ -86,12 +91,16 @@ function mainPage()
     print("\nDial Abydos (3)")
     print("Dial Chulak (4)")
     print("Dial Lantea (5)")
-    print("Dial Midway Station \/ The End (6)")
-    print("Dial Nether (7)")
-    print("Dial New Athos (8)")
-    print("Dial The Moon (9)")
-    print("Dial Mars (10)")
-    print("Dial Venus (11)")
+    --print("Dial Midway Station \/ The End (6)")
+    print("Dial Nether (6)")
+    --print("Dial New Athos (8)")
+    --print("Dial The Moon (9)")
+    --print("Dial Mars (10)")
+    --print("Dial Venus (11)")
+    print("The Undergarden (7)")
+    print("The Blue Skies Evergarden (8)")
+    print("Bloodmagic Dungeon (9)")
+    
 end
 
 --Refresh screen
@@ -187,18 +196,24 @@ while true do
         startDial(chulakAddress, "Chulak")
     elseif msg == "5" or msg == "lantea" then
         startDial(lanteaAddress, "Lantea", true)
-    elseif msg == "6" or msg == "midway" or msg == "end" then
-        startDial(midwayAddress, "the Midway Station (The End)")
-    elseif msg == "7" or msg == "nether" then
-        startDial(netherAddress, "the Nether")
-    elseif msg == "8" or msg == "athos" or msg == "newathos" or msg == "new athos" then
-        startDial(newAthosAddress, "New Athos", true)
-    elseif msg == "9" or msg == "moon" or msg == "the moon" or msg =="themoon" then
-        startDial(moonAddress, "The Moon")
-    elseif msg == "10" or msg == "mars" then
-        startDial(marsAddress, "Mars")
-    elseif msg == "11" or msg == "venus" then
-        startDial(venusAddress, "Venus")
+    --elseif msg == "6" or msg == "midway" or msg == "end" then
+        --startDial(midwayAddress, "the Midway Station (The End)")
+    elseif msg == "6" or msg == "nether" then
+        startDial(netherAddress, "The Nether")
+    --elseif msg == "8" or msg == "athos" or msg == "newathos" or msg == "new athos" then
+        --tartDial(newAthosAddress, "New Athos", true)
+    --elseif msg == "9" or msg == "moon" or msg == "the moon" or msg =="themoon" then
+        --startDial(moonAddress, "The Moon")
+    --elseif msg == "10" or msg == "mars" then
+        --startDial(marsAddress, "Mars")
+    --elseif msg == "11" or msg == "venus" then
+        --startDial(venusAddress, "Venus")
+    elseif msg == "7" or msg == "undergarden" then
+        startDial(netherAddress, "The Undergarden")
+    elseif msg == "8" or msg == "evergarden" then
+        startDial(netherAddress, "The Blue Skies Evergarden")
+    elseif msg == "9" or msg == "bloodmagic" then
+        startDial(netherAddress, "Bloodmagic Dungeon")
     else
         shell.run("clear")
         mainPage()
