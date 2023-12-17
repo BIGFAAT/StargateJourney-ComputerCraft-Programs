@@ -61,7 +61,7 @@ lanteaAddress = {18,20,1,15,14,7,19,0}
 netherAddress = {27,23,4,34,12,28,0}
 --newAthosAddress = {18,21,14,24,1,26,28,0}
 undergardenAddress = {14,31,3,28,22,21,0}
-evergardenAddress = {2,18,33,13,10,19}
+evergardenAddress = {2,18,33,13,10,19,0}
 bloodmagicAddress = {38,14,12,28,5,11,0}
 twilight = {36,11,30,27,23,24,0}
 
